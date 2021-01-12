@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pacman_Opening_Song_Sound_Effect.wav-2a4144e3cb3d1aedfa3c05ef6816f86a.sample"
+
+[deps]
+
+source_file="res://Assets/Music/WAV/Pacman_Opening_Song_Sound_Effect.wav"
+dest_files=[ "res://.import/Pacman_Opening_Song_Sound_Effect.wav-2a4144e3cb3d1aedfa3c05ef6816f86a.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

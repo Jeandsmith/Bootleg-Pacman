@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pacman_Eating_Ghost_Sound_Effect.wav-a6f3b7bacf1d8727d4e5a5d5091aaf29.sample"
+
+[deps]
+
+source_file="res://Assets/Music/WAV/Pacman_Eating_Ghost_Sound_Effect.wav"
+dest_files=[ "res://.import/Pacman_Eating_Ghost_Sound_Effect.wav-a6f3b7bacf1d8727d4e5a5d5091aaf29.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

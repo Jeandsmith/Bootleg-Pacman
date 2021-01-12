@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Pacman_Dies_Sound_Effect.wav-10900fc086054f21848c0bbbe8ccb94b.sample"
+
+[deps]
+
+source_file="res://Assets/Music/WAV/Pacman_Dies_Sound_Effect.wav"
+dest_files=[ "res://.import/Pacman_Dies_Sound_Effect.wav-10900fc086054f21848c0bbbe8ccb94b.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
