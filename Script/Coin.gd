@@ -6,5 +6,5 @@ func _on_Coin1_body_entered(body):
 		# Increment the player score by score
 		# Delete this object
 		scene_script.points += 1
-		print(scene_script.points)
+#		print(scene_script.points)
 		queue_free()
