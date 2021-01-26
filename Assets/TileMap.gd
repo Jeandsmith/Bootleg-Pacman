@@ -8,7 +8,6 @@ onready var _viewport_size = world_to_map(get_viewport().size)
 
 func _ready():
 	_get_empty_cells()
-#	print(_viewport_size)
 
 func _get_empty_cells():
 	var player_grid_pos = world_to_map(_player.position)
