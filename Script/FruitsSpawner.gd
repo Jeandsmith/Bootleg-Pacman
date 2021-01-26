@@ -6,7 +6,7 @@ var _MAX_FRUIT_COUNT = 3
 var count = 0
 
 func _ready():
-	$Timer.start(2)
+	$Timer.start(8)
 
 func _on_Timer_timeout():
 	if count < _MAX_FRUIT_COUNT:
@@ -15,5 +15,6 @@ func _on_Timer_timeout():
 		var rand_position = _tilemap.map_to_world(_tilemap.empty_cells[idx])
 		var fruit = _fruit_ref.instance()
 		_tilemap.empty_cells.remove(idx)
-#		fruit.position = rand_position
+		fruit.position = rand_position
+		add_child(fruit)
 		count += 1
