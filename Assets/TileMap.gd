@@ -1,16 +1,25 @@
 extends TileMap
 
+onready var empty_cells = PoolVector2Array([])
+onready var used_cells = get_used_cells()
+onready var grid = Vector2.ONE * 32
+onready var _player = get_parent().get_node("Player")
+onready var _viewport_size = world_to_map(get_viewport().size)
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	_get_empty_cells()
+#	print(_viewport_size)
 
+func _get_empty_cells():
+	var player_grid_pos = world_to_map(_player.position)
+	for x in range(grid.x):
+		for y in range(grid.y):
+			var cell = Vector2(x, y)
+			if cell in used_cells or cell == player_grid_pos:
+				continue
+			if not is_out_of_viewport(cell):
+				empty_cells.append(cell)
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func is_out_of_viewport(cell) -> bool:
+	return cell.x < 0 or cell.y < 1 or cell.x > _viewport_size.x or cell.y > _viewport_size.y
+	

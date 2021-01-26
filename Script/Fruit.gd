@@ -1,6 +1,8 @@
 extends Area2D
 
-onready var _tilemap = get_parent().get_parent()
+onready var _level = get_parent().get_parent()
+onready var _tilemap = get_parent().get_parent().get_node("TileMap")
+onready var _fruit_spawner = get_parent()
 onready var _fruit_textures = PoolStringArray([
 	"res://Assets/Peach.png",
 	"res://Assets/pineapple.png",
@@ -17,7 +19,9 @@ func _ready():
 func _on_Fruit_body_entered(body):
 	if body.name== "Player":
 #		Increment the player points by x
-		_tilemap.points += 600
-
+		_level.points += 600
+		_tilemap.empty_cells.append(self.position)
+		_fruit_spawner.count -= 1
+		print(_fruit_spawner.count)
 #		Remove thise fruit from the board
 		queue_free()

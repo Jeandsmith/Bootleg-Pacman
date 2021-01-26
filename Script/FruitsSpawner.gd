@@ -1,16 +1,19 @@
 extends Node2D
 
+onready var _tilemap = get_parent().get_node("TileMap")
+var _fruit_ref = preload("res://Assets/Fruit.tscn")
+var _MAX_FRUIT_COUNT = 3
+var count = 0
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	$Timer.start(8)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _on_Timer_timeout():
+	if count < _MAX_FRUIT_COUNT:
+		randomize()
+		var idx = randi() % _tilemap.empty_cells.size()
+		var rand_position = _tilemap.map_to_world(_tilemap.empty_cells[idx])
+		var fruit = _fruit_ref.instance()
+		_tilemap.empty_cells.remove(idx)
+		fruit.position = rand_position
+		count += 1
