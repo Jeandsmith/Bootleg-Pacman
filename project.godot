@@ -19,6 +19,10 @@ config/name="Bootleg Pacman"
 run/main_scene="res://Scenes/Level.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [memory]
 
 limits/message_queue/max_size_kb=4096

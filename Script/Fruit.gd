@@ -19,9 +19,8 @@ func _ready():
 func _on_Fruit_body_entered(body):
 	if body.name== "Player":
 #		Increment the player points by x
-		_level.points += 600
+		_level.points += (600 * _level.multiplier)
 		_tilemap.empty_cells.append(self.position)
 		_fruit_spawner.count -= 1
-		print(_fruit_spawner.count)
 #		Remove thise fruit from the board
 		queue_free()

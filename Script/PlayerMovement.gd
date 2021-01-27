@@ -15,13 +15,6 @@ func play_sound_effect():
 		$AudioStreamPlayer.stream_paused = false
 		$AudioStreamPlayer.play($AudioStreamPlayer.get_playback_position())
 
-# Handle XBOX Joystick
-#func _unhandled_input(event):
-##	if even is InputEventJoypadMotion:
-#	if event is InputEventJoypadMotion:
-#		if event.axis == JOY_ANALOG_LX:
-#			print(event.axis)
-
 func _physics_process(delta):	
 	
 	# Move

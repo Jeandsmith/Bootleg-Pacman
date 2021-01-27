@@ -20,5 +20,5 @@ func _get_empty_cells():
 				empty_cells.append(cell)
 
 func is_out_of_viewport(cell) -> bool:
-	return cell.x < 0 or cell.y < 1 or cell.x > _viewport_size.x or cell.y > _viewport_size.y
+	return cell.x < 0 or cell.y < 1 or cell.x > _viewport_size.x or cell.y > _viewport_size.y - 1
 	

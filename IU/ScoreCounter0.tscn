@@ -4,6 +4,9 @@
 [ext_resource path="res://Script/ScoreCounter.gd" type="Script" id=2]
 
 [node name="ScoreCounter" instance=ExtResource( 1 )]
+margin_right = 0.0
+margin_bottom = 0.0
 
 [node name="LabelCounter" parent="." index="1"]
+margin_right = -8.0
 script = ExtResource( 2 )
